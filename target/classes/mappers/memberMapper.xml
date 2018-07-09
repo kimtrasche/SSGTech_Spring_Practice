@@ -14,5 +14,16 @@
         (#{userid}, #{userpw}, #{username}, #{email})
     </insert>
 
+    <select id="selectMember" resultType="kr.co.sinc.vo.MemberVO">
+    
+        SELECT * FROM TBL_MEMBER WHERE USERID = #{userid}
+    
+    </select>
+
+    <select id="readWithPW" resultType="kr.co.sinc.vo.MemberVO">
+    
+        SELECT * FROM TBL_MEMBER WHERE USERID = #{userid} AND USERPW = #{userpw}
+    </select>
+
 </mapper>
     

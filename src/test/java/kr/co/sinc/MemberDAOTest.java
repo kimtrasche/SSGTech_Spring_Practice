@@ -35,4 +35,17 @@ public class MemberDAOTest {
 		*/
 	}
 	
+	@Test
+	public void readMember() throws Exception{
+		
+		MemberVO vo = dao.readMember("171928");
+		System.out.println(vo.toString());
+	}
+	
+
+	@Test
+	public void readWithPW() throws Exception{
+		MemberVO vo = dao.readWithPW("171928", "111111");
+		System.out.println(vo.toString());
+	}
 }
